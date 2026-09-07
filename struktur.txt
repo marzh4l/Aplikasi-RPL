@@ -1,0 +1,41 @@
+rpl-konversi/
+├── index.php                 # Redirect ke login
+├── login.php                 # Halaman login
+├── logout.php                # Proses logout
+├── dashboard.php             # Halaman utama setelah login
+├── .htaccess                 # Proteksi direktori (opsional)
+│
+├── assets/
+│   ├── css/
+│   │   ├── bootstrap.min.css
+│   │   └── custom.css        # Warna tema merah
+│   ├── js/
+│   │   ├── bootstrap.bundle.min.js
+│   │   └── custom.js         # Logika nilai otomatis
+│   └── images/
+│
+├── includes/
+│   ├── header.php            # Template head & navbar
+│   ├── sidebar.php           # Menu sesuai role
+│   ├── footer.php            # Template footer
+│   └── functions.php         # Fungsi helper PHP
+│
+├── config/
+│   └── database.php          # Koneksi database
+│
+├── pages/
+│   ├── admin/
+│   │   ├── kelola_akun.php
+│   │   ├── kelola_prodi.php
+│   │   └── kelola_kurikulum.php
+│   ├── rpl/
+│   │   ├── konversi.php
+│   │   └── verifikasi.php
+│   └── mahasiswa/
+│       ├── input_konversi.php
+│       ├── data_konversi.php
+│       └── pilih_matkul.php
+│
+└── exports/
+    ├── pdf/                  # Library DomPDF / MPDF
+    └── excel/                # Library PhpSpreadsheet

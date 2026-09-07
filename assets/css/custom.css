@@ -1,0 +1,103 @@
+:root {
+    --primary-red: #dc3545;
+    --dark-red: #a71d2a;
+    --light-red: #f8d7da;
+}
+
+body { 
+    background-color: #f4f6f9; 
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #dc3545 0%, #a71d2a 100%);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar .nav-link {
+    color: rgba(255,255,255,0.85);
+    border-radius: 5px;
+    margin: 2px 10px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.sidebar .nav-link.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+    font-weight: bold;
+}
+
+/* Submenu */
+.sidebar .collapse .nav-link {
+    font-size: 0.9rem;
+    padding: 6px 15px;
+    margin: 1px 10px;
+}
+
+.sidebar .collapse .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Chevron animation */
+.sidebar .nav-link[aria-expanded="true"] .bi-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.sidebar .nav-link[aria-expanded="false"] .bi-chevron-down {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    min-height: 100vh;
+}
+
+/* ===== CARD ===== */
+.card-header-theme {
+    background-color: var(--primary-red);
+    color: white;
+}
+
+.btn-theme {
+    background-color: var(--primary-red);
+    border-color: var(--dark-red);
+    color: white;
+}
+
+.btn-theme:hover {
+    background-color: var(--dark-red);
+    color: white;
+}
+
+.table thead {
+    background-color: var(--primary-red) !important;
+    color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+    .sidebar {
+        min-height: auto;
+        padding-bottom: 20px;
+    }
+    
+    .sidebar .text-center.d-none.d-md-block {
+        display: none !important;
+    }
+    
+    main {
+        padding-top: 20px;
+    }
+    
+    h2 { font-size: 1.5rem; }
+    h4 { font-size: 1.2rem; }
+}

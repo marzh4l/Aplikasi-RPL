@@ -1,0 +1,19 @@
+{
+    "name": "user/rpl-konversi",
+    "type": "n",
+    "autoload": {
+        "psr-4": {
+            "User\\RplKonversi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "marsal"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpoffice/phpspreadsheet": "dev-master",
+        "dompdf/dompdf": "dev-master"
+    }
+}

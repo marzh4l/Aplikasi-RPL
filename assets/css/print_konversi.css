@@ -1,0 +1,267 @@
+        /* RESET & BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 9pt;
+            color: #000;
+            line-height: 1.3;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        /* PRINT CONTROLS - Hidden when printing */
+        .print-controls {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .print-controls h3 {
+            font-size: 12pt;
+            color: #333;
+            margin: 0;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 9pt;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .btn-print { background: #0d6efd; color: #fff; }
+        .btn-back { background: #6c757d; color: #fff; }
+
+        /* DOCUMENT HEADER */
+        .doc-header {
+            text-align: center;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #333;
+        }
+        .doc-header h2 {
+            font-size: 13pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+            padding: 0;
+        }
+        .doc-header p {
+            font-size: 8pt;
+            color: #444;
+            margin: 2px 0 0 0;
+        }
+
+        /* KONVERSI BLOCK */
+        .konversi-block {
+            margin-bottom: 20px;
+            border: 1px solid #333;
+        }
+
+        .konversi-header {
+            background: #f0f0f0;
+            padding: 5px 10px;
+            border-bottom: 1px solid #333;
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .konversi-header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .konversi-header .left { float: left; }
+        .konversi-header .right { float: right; }
+
+        .badge {
+            display: inline-block;
+            padding: 1px 6px;
+            border-radius: 2px;
+            font-size: 8pt;
+            font-weight: normal;
+            border: 1px solid #999;
+        }
+        .badge-draft { background: #e9ecef; }
+        .badge-menunggu { background: #fff3cd; border-color: #ffc107; }
+        .badge-diverifikasi { background: #d1e7dd; border-color: #198754; color: #0f5132; }
+        .badge-ditolak { background: #f8d7da; border-color: #dc3545; color: #842029; }
+
+        /* INFO CARDS */
+        .info-table-outer {
+            width: 100%;
+            border-collapse: collapse;
+            border-bottom: 1px solid #333;
+        }
+        .info-table-outer td {
+            width: 50%;
+            vertical-align: top;
+            padding: 8px;
+            border-right: 1px solid #333;
+        }
+        .info-table-outer td:last-child {
+            border-right: none;
+        }
+        .info-card-title {
+            font-size: 9pt;
+            font-weight: bold;
+            margin-bottom: 5px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #999;
+        }
+        .info-table {
+            width: 100%;
+            font-size: 8pt;
+            border-collapse: collapse;
+        }
+        .info-table td {
+            padding: 2px 0;
+            border: none;
+            width: auto;
+        }
+        .info-table td:first-child {
+            width: 25%;
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            font-size: 9pt;
+            font-weight: bold;
+            padding: 5px 10px;
+            background: #fafafa;
+        }
+
+        /* MAIN TABLE (Hasil Konversi) */
+        .main-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8pt;
+            border-bottom: 1px solid #333;
+        }
+        .main-table th, .main-table td {
+            border: 1px solid #333;
+            padding: 3px 4px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .main-table th {
+            background: #f5f5f5;
+            font-weight: bold;
+        }
+        .header-asal { background: #dbeafe !important; font-weight: bold; }
+        .header-tujuan { background: #fee2e2 !important; font-weight: bold; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        .fw-bold { font-weight: bold; }
+        .total-row {
+            background: #f0f0f0;
+            font-weight: bold;
+        }
+
+        /* MK TABLE - 1 tabel panjang */
+        .mk-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8pt;
+        }
+        .mk-table th, .mk-table td {
+            border: 1px solid #333;
+            padding: 3px 4px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .mk-table th {
+            background: #f5f5f5;
+            font-weight: bold;
+        }
+        .group-header {
+            background: #e5e5e5 !important;
+            font-weight: bold;
+            text-align: center;
+        }
+        .tfoot-total {
+            background: #333 !important;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* MK PAGE BREAK - Pisah halaman */
+        .mk-section {
+            page-break-before: always;
+            border: 1px solid #333;
+        }
+
+        /* SIGNATURE */
+        .signature-table {
+            margin-top: 25px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .signature-table td {
+            width: 50%;
+            text-align: center;
+            vertical-align: top;
+            padding: 10px;
+        }
+        .signature-line {
+            border-bottom: 1px solid #333;
+            width: 160px;
+            margin: 40px auto 3px auto;
+        }
+
+        /* FOOTER */
+        .doc-footer {
+            margin-top: 12px;
+            text-align: center;
+            font-size: 7pt;
+            color: #555;
+            border-top: 1px solid #ccc;
+            padding-top: 5px;
+        }
+
+        /* PRINT MEDIA QUERY */
+        @media print {
+            @page {
+                size: A4 landscape;
+                margin: 6mm;
+            }
+            body {
+                font-size: 8pt;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .print-controls {
+                display: none !important;
+            }
+            .container {
+                padding: 0;
+                max-width: 100%;
+            }
+            .doc-header {
+                margin-bottom: 8px;
+                padding-bottom: 5px;
+            }
+            .konversi-block {
+                page-break-inside: auto;
+            }
+            .mk-section {
+                page-break-before: always;
+            }
+            tr {
+                page-break-inside: avoid;
+            }
+        }
